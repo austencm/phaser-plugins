@@ -1,0 +1,25 @@
+.search {
+  margin-bottom: 45px;
+
+  &__results {
+    
+  }
+
+  &__result {
+
+    &__actions-right {
+      margin-left: auto;
+
+      & > * {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &__results-count {
+    height: 0;
+    position: relative;
+    top: -35px;
+    text-align: right;
+  }
+}
