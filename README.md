@@ -4,13 +4,15 @@
   </a>
 </h1>
 
-<h5 align="center">
-  Unofficial open source plugin repository for the <a href="https://phaser.io" target="_blank">Phaser</a> framework. Created with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>. <a href="https://lunrjs.com/" target="_blank">Lunr</a> for search.
-</h5>
+<h3 align="center">
+  Unofficial open source plugin repository for the <a href="https://phaser.io" target="_blank">Phaser</a> framework.<br />
+  Created with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.<br />
+  <a href="https://lunrjs.com/" target="_blank">Lunr</a> for search.
+</h3>
 
-<h5 align="center">
+<h3 align="center">
   <a href="https://phaserplugins.com">phaserplugins.com</a>
-</h5>
+</h3>
 
 ## Contributing
 
