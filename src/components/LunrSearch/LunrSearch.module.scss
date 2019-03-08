@@ -2,13 +2,13 @@
   margin-bottom: 45px;
 
   &__results {
-    
+
   }
 
   &__result {
 
     &__actions-right {
-      margin-left: auto;
+      margin-left: auto !important;
 
       & > * {
         margin-left: 6px;
