@@ -9,7 +9,7 @@ module.exports = {
   copyright: '',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: '',
+  googleAnalyticsId: 'UA-135908861-1',
   githubToken: process.env.GITHUB_API_TOKEN,
   menu: [
     {
