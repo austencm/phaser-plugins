@@ -16,10 +16,6 @@ const LunrSearch = ({ lunr }) => {
   const results = useLunr(query, index, store);
   const allResults = _.sortBy( Object.values(JSON.parse(store)), (result) => result.stars ).reverse();
 
-  const freqs = {};
-  allResults.forEach((r) => freqs[r.id] = typeof freqs[r.id] !== 'undefined' ? freqs[r.id] + 1 : 0)
-  console.log(freqs)
-
   return (
     <div>
       <form className={styles['search']}>
@@ -61,7 +57,7 @@ const SearchResult = ({ result }) => (
             <Avatar src={result.ownerAvatarUrl} alt="Recipe" />
           </a>
         }
-        title={result.ownerLogin}
+        title={<a href={result.ownerUrl}>{result.ownerLogin}</a>}
         subheader={`Updated ${moment(result.updatedAt).format('MMM D[,] YYYY')}`}
       />
       <CardContent>
