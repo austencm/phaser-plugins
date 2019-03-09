@@ -12,6 +12,7 @@ module.exports = {
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     logo: siteConfig.logo,
+    preview: siteConfig.preview,
     copyright: siteConfig.copyright,
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
@@ -148,6 +149,7 @@ module.exports = {
       options: {
         alias: {
           "components": `${__dirname}/src/components`,
+          "media": `${__dirname}/static/media`,
         },
         extensions: [
           "js",

@@ -8,19 +8,20 @@ import { graphql } from 'gatsby';
 
 const IndexTemplate = ({ data }) => {
   const { siteMetadata: meta } = data.site;
+  const image = meta.url + meta.preview;
 
   return (
     <Layout>
       <Helmet>
         <title>{meta.title}</title>
         <meta name="description" content={meta.subtitle} />
-        <meta name="image" content={meta.preview} />
+        <meta name="image" content={image} />
 
         <meta property="og:url" content={meta.url} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.subtitle} />
-        <meta property="og:image" content={meta.preview} />
+        <meta property="og:image" content={image} />
         <meta property="og:image:width" content={600} />
         <meta property="og:image:height" content={600} />
 
@@ -28,7 +29,7 @@ const IndexTemplate = ({ data }) => {
         <meta name="twitter:creator" content="@austencm" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.subtitle} />
-        <meta name="twitter:image" content={meta.preview} />
+        <meta name="twitter:image" content={image} />
       </Helmet>
 
       <Sidebar isIndex />
@@ -45,6 +46,8 @@ export const query = graphql`
       siteMetadata {
         title
         subtitle
+        url
+        preview
       }
     }
     localSearchPhaserPlugins {
