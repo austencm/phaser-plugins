@@ -32,47 +32,47 @@ module.exports = [
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-spine',
+    repo: 'azerion/phaser-spine',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-nineslice',
+    repo: 'azerion/phaser-nineslice',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-ads',
+    repo: 'azerion/phaser-ads',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-i18next',
+    repo: 'azerion/phaser-i18next',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-input',
+    repo: 'azerion/phaser-input',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-super-storage',
+    repo: 'azerion/phaser-super-storage',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-cachebuster',
+    repo: 'azerion/phaser-cachebuster',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-amazon-cognito',
+    repo: 'azerion/phaser-amazon-cognito',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-crisp-text',
+    repo: 'azerion/phaser-crisp-text',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-advanced-debug',
+    repo: 'azerion/phaser-advanced-debug',
     compatibility: [],
   },
   {
-    repo: 'orange-games/phaser-web-workers',
+    repo: 'azerion/phaser-web-workers',
     compatibility: [],
   },
   {
@@ -420,10 +420,6 @@ module.exports = [
     compatibility: [],
   },
   {
-    repo: 'agogpixel/phaser-glyphmap-plugin',
-    compatibility: ['3'],
-  },
-  {
     repo: 'philippecapouillez/phaser-VirtualTimer',
     compatibility: [],
   },
@@ -480,7 +476,7 @@ module.exports = [
     compatibility: [],
   },
   {
-    repo: 'rroylance/phaser-ce-npm-webpack-typescript-starter-project', 
+    repo: 'rroylance/phaser-ce-npm-webpack-typescript-starter-project',
     compatibility: ['2', 'ce'],
   }
 ];
