@@ -479,4 +479,8 @@ module.exports = [
     repo: 'nsbawden/TouchCursor',
     compatibility: [],
   },
+  {
+    repo: 'rroylance/phaser-ce-npm-webpack-typescript-starter-project', 
+    compatibility: ['2', 'ce'],
+  }
 ];
