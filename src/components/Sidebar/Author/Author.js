@@ -7,7 +7,7 @@ const Author = ({ author }) => (
   <div className={styles['author']}>
     <Link to="/">
       <img
-        src={withPrefix(author.photo)}
+        src={author.photo}
         className={styles['author__photo']}
         width={208}
         height={75}
