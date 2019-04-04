@@ -45,3 +45,8 @@ Each plugin should include the following data:
     └── utils
 
 ```
+
+## Roadmap
+- Compatibility filter
+- Phaser templates section
+- Phaser examples section
