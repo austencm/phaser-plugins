@@ -47,7 +47,9 @@ Each plugin should include the following data:
 ```
 
 ## Roadmap
+- Move to Netlify
 - Automatic data refresh
 - Compatibility filter
+- Tags
 - Phaser templates section
 - Phaser examples section

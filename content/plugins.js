@@ -308,7 +308,7 @@ module.exports = [
     compatibility: [],
   },
   {
-    repo: 'KaktusFlame/phaser-sound-analyser',
+    repo: 'CyberCactus/phaser-sound-analyser',
     compatibility: [],
   },
   {
