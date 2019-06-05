@@ -47,6 +47,7 @@ Each plugin should include the following data:
 ```
 
 ## Roadmap
+- Automatic data refresh
 - Compatibility filter
 - Phaser templates section
 - Phaser examples section
