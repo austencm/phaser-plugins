@@ -478,5 +478,9 @@ module.exports = [
   {
     repo: 'rroylance/phaser-ce-npm-webpack-typescript-starter-project',
     compatibility: ['2', 'ce'],
+  },
+  {
+    repo: 'GaryStanton/phaser3-merged-input',
+    compatibility: ['3'],
   }
 ];
