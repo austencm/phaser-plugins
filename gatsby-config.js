@@ -26,7 +26,7 @@ module.exports = {
           Authorization: `Bearer ${siteConfig.githubToken}`,
         },
         queries: phaserPlugins.map(({ repo }) => {
-          const  [owner, name] = repo.split('/');
+          const [owner, name] = repo.split('/');
 
           return `
             {
@@ -59,7 +59,7 @@ module.exports = {
         // A unique name for the search index. This should be descriptive of
         // what the index contains.
         name: 'phaserPlugins',
-
+        engine: 'lunr',
         // GraphQL query used to fetch all data for the search index.
         query: `
           {
@@ -95,8 +95,8 @@ module.exports = {
         // Function used to map the result from the GraphQL query. This should
         // return an array of items to index in the form of flat objects
         // containing properties to index.
-        normalizer: ({ data }) => (
-          data.allGithubRepository.edges.map(({ node }, i) => {
+        normalizer: ({ data }) => {
+          return data.allGithubRepository.edges.map(({ node }, i) => {
             const { id, name, owner, description, url, stargazers, updatedAt } = node;
             const compatibility = phaserPlugins[i].compatibility.join(' ');
 
@@ -113,7 +113,7 @@ module.exports = {
               compatibility,
             }
           })
-        ),
+        },
       },
     },
     {
