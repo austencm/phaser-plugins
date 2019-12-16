@@ -1,12 +1,11 @@
 .search {
-  margin-bottom: 45px;
+  margin-bottom: 5px;
 
   &__results {
 
   }
 
   &__result {
-
     &__actions-right {
       margin-left: auto !important;
 
@@ -16,10 +15,16 @@
     }
   }
 
+  &__meta {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &__last-updated {
+    opacity: 0.3;
+  }
+
   &__results-count {
-    height: 0;
-    position: relative;
-    top: -35px;
     text-align: right;
   }
 }

@@ -34,7 +34,7 @@ const IndexTemplate = ({ data }) => {
 
       <Sidebar isIndex />
       <Page>
-        <LunrSearch lunr={data.localSearchPhaserPlugins} />
+        <LunrSearch lunr={data.localSearchPhaserPlugins} updatedAt={meta.updatedAt} />
       </Page>
     </Layout>
   );
@@ -48,6 +48,7 @@ export const query = graphql`
         subtitle
         url
         preview
+        updatedAt
       }
     }
     localSearchPhaserPlugins {

@@ -10,7 +10,7 @@ import { useLunr } from 'react-lunr';
 
 const formatQuery = (input) => input ? `${input}*^2 *${input} ${input}~1` : '';
 
-const LunrSearch = ({ lunr }) => {
+const LunrSearch = ({ lunr, updatedAt }) => {
   const { index, store } = lunr;
   const [query, setQuery] = useState(null);
   const setQueryDebounced = debounce(setQuery, 200);
@@ -39,8 +39,17 @@ const LunrSearch = ({ lunr }) => {
         />
       </form>
 
-      <div className={styles['search__results-count']}>
-        {results.length || (query && query.length) ? `${results.length} result${results.length === 1 ? '' : 's'}` : ''}
+      <div className={styles['search__meta']}>
+        <Grid container spacing={8}>
+          <Grid item xs={6}>
+            <div className={styles['search__last-updated']}>Updated {moment(updatedAt).calendar()}</div>
+          </Grid>
+          <Grid item xs={6}>
+            <div className={styles['search__results-count']}>
+              {results.length || (query && query.length) ? `${results.length} result${results.length === 1 ? '' : 's'}` : ''}
+            </div>
+          </Grid>
+        </Grid>
       </div>
 
       <div className={styles['search__results']}>
