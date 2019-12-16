@@ -1,4 +1,4 @@
-name: Node CI
+name: Build & Deploy
 
 on:
   push:
@@ -8,22 +8,37 @@ on:
     - cron: '0 8 * * *'
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [12.x]
-    
+
     steps:
     - uses: actions/checkout@v1
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: deploy
-      run: |
-        npm install
-        npm run deploy --if-present
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
       env:
-        CI: true
+        ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
+      with:
+        emptyCommits: false
