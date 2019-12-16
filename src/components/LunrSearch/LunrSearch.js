@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Search, Star } from '@material-ui/icons';
 
 import GithubIcon from 'components/GithubIcon';
-import _ from 'lodash';
+import { debounce, sortBy } from 'lodash';
 import moment from 'moment';
 import styles from './LunrSearch.module.scss';
 import { useLunr } from 'react-lunr';
@@ -13,8 +13,16 @@ const formatQuery = (input) => input ? `${input}*^2 *${input} ${input}~1` : '';
 const LunrSearch = ({ lunr }) => {
   const { index, store } = lunr;
   const [query, setQuery] = useState(null);
+  const setQueryDebounced = debounce(setQuery, 200);
   const results = useLunr(query, index, store);
-  const allResults = _.sortBy( Object.values(JSON.parse(store)), (result) => result.stars ).reverse();
+  const allResults = sortBy( Object.values(JSON.parse(store)), (result) => result.stars ).reverse();
+
+  const onKeyUp = (e) => {
+    if (e.target.value.length !== 1) {
+      e.persist();
+      setQueryDebounced(formatQuery(e.target.value));
+    }
+  };
 
   return (
     <div>
@@ -25,8 +33,8 @@ const LunrSearch = ({ lunr }) => {
           placeholder={`Search ${allResults.length} plugins`}
           variant="outlined"
           InputProps={{
-            startAdornment: <InputAdornment position="start"><Search /></InputAdornment>,
-            onKeyUp: (e) => setQuery(formatQuery(e.target.value)),
+            startAdornment: (<InputAdornment position="start"><Search /></InputAdornment>),
+            onKeyUp,
           }}
         />
       </form>
