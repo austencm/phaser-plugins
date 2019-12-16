@@ -10,7 +10,9 @@ module.exports = {
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-135908861-1',
-  githubToken: process.env.GITHUB_API_TOKEN,
+  // This token has no special permissions. It's just for fetching repo
+  // metadata during CD.
+  githubToken: 'f383beb7de46bcd34d40dd136f40f5ce6342e5d3',
   menu: [
     {
       label: 'Phaser',
