@@ -8,7 +8,7 @@ const postCssPlugins = require('./postcss-config.js');
 
 module.exports = {
   siteMetadata: {
-    url: siteConfig.url,
+    siteUrl: siteConfig.url,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     logo: siteConfig.logo,
@@ -168,7 +168,7 @@ module.exports = {
           {
             site {
               siteMetadata {
-                url
+                siteUrl
               }
             }
             allSitePage(
@@ -186,7 +186,7 @@ module.exports = {
         `,
         output: '/sitemap.xml',
         serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.url + edge.node.path,
+          url: site.siteMetadata.siteUrl + edge.node.path,
           changefreq: 'daily',
           priority: 0.7
         }))

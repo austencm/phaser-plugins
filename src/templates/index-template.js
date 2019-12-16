@@ -8,7 +8,7 @@ import { graphql } from 'gatsby';
 
 const IndexTemplate = ({ data }) => {
   const { siteMetadata: meta } = data.site;
-  const image = meta.url + meta.preview;
+  const image = meta.siteUrl + meta.preview;
 
   return (
     <Layout>
@@ -17,7 +17,7 @@ const IndexTemplate = ({ data }) => {
         <meta name="description" content={meta.subtitle} />
         <meta name="image" content={image} />
 
-        <meta property="og:url" content={meta.url} />
+        <meta property="og:url" content={meta.siteUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.subtitle} />
@@ -46,7 +46,7 @@ export const query = graphql`
       siteMetadata {
         title
         subtitle
-        url
+        siteUrl
         preview
         updatedAt
       }

@@ -2,6 +2,7 @@
   "version": "1.0.0",
   "name": "phaser-plugins",
   "description": "Unofficial open source plugin repository for the Phaser framework.",
+  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
