@@ -16,7 +16,7 @@ const Author = ({ author }) => (
     </Link>
 
     <h1 className={styles['author__title']}>
-      Unofficial open source plugin repository for the <a href="https://phaser.io" title="Phaser">Phaser</a> framework.
+      Unofficial open source plugin catalog for the <a href="https://phaser.io" title="Phaser">Phaser</a> framework.
     </h1>
 
     <p className={styles['author__subtitle']}>

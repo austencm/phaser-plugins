@@ -5,7 +5,7 @@
 </h1>
 
 <h3 align="center">
-  Unofficial open source plugin repository for the <a href="https://phaser.io" target="_blank">Phaser</a> framework.<br />
+  Unofficial open source plugin catalog for the <a href="https://phaser.io" target="_blank">Phaser</a> framework.<br />
   Created with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.<br />
   <a href="https://lunrjs.com/" target="_blank">Lunr</a> for search.
 </h3>

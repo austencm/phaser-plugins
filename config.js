@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://phaserplugins.com',
   title: 'Phaser Plugins 🔌',
-  subtitle: 'Unofficial open source plugin repository for the Phaser framework',
+  subtitle: 'Unofficial open source plugin catalog for the Phaser framework',
   logo: '/phaser-plugins-logo.png',
   preview: '/preview.png',
   copyright: '',

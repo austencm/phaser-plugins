@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "phaser-plugins",
-  "description": "Unofficial open source plugin repository for the Phaser framework.",
+  "description": "Unofficial open source plugin catalog for the Phaser framework.",
   "license": "MIT",
   "main": "n/a",
   "scripts": {
