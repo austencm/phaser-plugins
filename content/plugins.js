@@ -197,11 +197,11 @@ module.exports = [
   },
   {
     repo: 'samme/phaser-plugin-scene-graph',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-plugin-advanced-timing',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-plugin-debug-body-colors',
@@ -237,15 +237,15 @@ module.exports = [
   },
   {
     repo: 'samme/phaser-plugin-debug-arcade-physics',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-track',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-plugin-game-gui',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser3-examples-assets',
@@ -253,47 +253,47 @@ module.exports = [
   },
   {
     repo: 'samme/phaser-plugin-debug-tween',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-debug-object',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-sprite-gui',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-view-cache',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-plugin-step',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-teletype',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-debug-emitter',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-ondamaged-signal',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-camera-offset',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-group-signals',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'samme/phaser-batch-emitter',
-    compatibility: [],
+    compatibility: ['2'],
   },
   {
     repo: 'mikewesthad/phaser-matter-collision-plugin',
