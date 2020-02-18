@@ -482,5 +482,9 @@ module.exports = [
   {
     repo: 'GaryStanton/phaser3-merged-input',
     compatibility: ['3'],
-  }
+  },
+  {
+    repo: 'ivopc/phaser3-illuminated',
+    compatibility: ['3'],
+  },
 ];
