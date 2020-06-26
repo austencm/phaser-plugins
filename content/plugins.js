@@ -336,7 +336,7 @@ module.exports = [
     compatibility: [],
   },
   {
-    repo: 'ad4game/phaser-a4g ',
+    repo: 'ad4game/phaser-a4g',
     compatibility: [],
   },
   {
