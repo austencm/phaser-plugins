@@ -152,10 +152,6 @@ module.exports = [
     compatibility: ['3'],
   },
   {
-    repo: 'koreezgames/phaser2-ninepatch-plugin',
-    compatibility: ['2'],
-  },
-  {
     repo: '16patsle/phaser3-weapon-plugin',
     compatibility: ['3'],
   },
