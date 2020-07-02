@@ -48,6 +48,7 @@ Each plugin should include the following data:
 
 ## Roadmap
 - [ ] Move to Netlify
+- [ ] Virtualize scrolling for improved performance
 - [x] ~~Automatic data refresh~~
 - [ ] Compatibility filter
 - [ ] Tags
