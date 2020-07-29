@@ -483,4 +483,7 @@ module.exports = [
     repo: 'ivopc/phaser3-illuminated',
     compatibility: ['3'],
   },
+  {
+    repo: 'browndragon/phaser3-autotile',
+    compatibility: ['3'],
 ];
