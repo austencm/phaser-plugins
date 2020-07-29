@@ -486,4 +486,5 @@ module.exports = [
   {
     repo: 'browndragon/phaser3-autotile',
     compatibility: ['3'],
+  },
 ];
