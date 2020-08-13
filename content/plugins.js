@@ -300,10 +300,6 @@ module.exports = [
     compatibility: ['3'],
   },
   {
-    repo: 'videlais/phaser-cocoonjs-ouya-gamepad-plugin',
-    compatibility: [],
-  },
-  {
     repo: 'CyberCactus/phaser-sound-analyser',
     compatibility: [],
   },
