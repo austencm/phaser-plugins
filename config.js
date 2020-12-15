@@ -41,7 +41,7 @@ module.exports = {
       email: '',
       telegram: '',
       twitter: '',
-      github: 'https://github.com/austencm/phaser-plugins',
+      github: 'austencm/phaser-plugins',
       rss: '',
       vkontakte: ''
     }
