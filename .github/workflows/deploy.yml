@@ -10,28 +10,24 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
+    
     steps:
-    - uses: actions/checkout@v1
-    - uses: bahmutov/npm-install@v1
-
-    - name: Use Node.js ${{ matrix.node-version }}
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '12.x'
+    
+    - name: Install dependencies
+      run: npm ci
 
     - name: Build
       run: GITHUB_ACCESS_TOKEN=${{ secrets.GITHUB_ACCESS_TOKEN }} npm run build
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        PERSONAL_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+      uses: peaceiris/actions-gh-pages@v3
       with:
+        personal_token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+        publish_dir: ./public
         emptyCommits: false
