@@ -1,56 +1,54 @@
-<h1 align="center">
-  <a href="https://phaserplugins.com">
-    <img alt="Lumen" title="Lumen" src="https://raw.githubusercontent.com/austencm/phaser-plugins/master/static/phaser-plugins-logo.png" width="208" />
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
 </h1>
 
-<h3 align="center">
-  Unofficial open source plugin catalog for the <a href="https://phaser.io" target="_blank">Phaser</a> framework.<br />
-  Created with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.<br />
-  <a href="https://lunrjs.com/" target="_blank">Lunr</a> for search.
-</h3>
+## 🚀 Quick start
 
-<h3 align="center">
-  <a href="https://phaserplugins.com">phaserplugins.com</a>
-</h3>
+1.  **Create a Gatsby site.**
 
-## Contributing
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-Add plugins to the master list in [`content/plugins.js`](https://github.com/austencm/phaser-plugins/content/plugins.js).
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-Each plugin should include the following data:
-```
-{
-  repo: 'owner/name',  // Owner and name of a Github repo, separated by a slash.
-  compatibility: [],   // A list Phaser versions this plugin supports, as strings. Typically either '2' or '3'. If unknown, leave as an empty array.  
-}
-```
+2.  **Start developing.**
 
-## Folder Structure
+    Navigate into your new site’s directory and start it up.
 
-```
-└── content
-    └── plugins.js
-└── static
-    ├── admin
-    └── media
-└── src
-    ├── assets
-    │   └── scss
-    │       ├── base
-    │       └── mixins
-    ├── components
-    ├── constants
-    ├── templates
-    └── utils
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-```
+3.  **Open the code and start customizing!**
 
-## Roadmap
-- [ ] Move to Netlify
-- [ ] Virtualize scrolling for improved performance
-- [x] ~~Automatic data refresh~~
-- [ ] Compatibility filter
-- [ ] Tags
-- [ ] Phaser templates section
-- [ ] Phaser examples section
+    Your site is now running at http://localhost:8000!
+
+    Edit `src/pages/index.js` to see your site update in real-time!
+
+4.  **Learn more**
+
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
