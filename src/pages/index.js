@@ -3,9 +3,9 @@ import { useMemo, useState } from 'react'
 import { useLocalSearch } from '@/lib/use-local-search'
 
 export default function IndexPage(props) {
-  console.log(props)
   const { localSearchPlugins } = props.data
   const [query, setQuery] = useState('')
+  const [compat, setCompat] = useState(null)
 
   const mostStarred = useMemo(
     () =>
@@ -18,16 +18,32 @@ export default function IndexPage(props) {
     localSearchPlugins.store,
     query
   )
+
+  const filteredResults = useMemo(() => {
+    return compat
+      ? searchResults.filter((result) => result.compatibility.includes(compat))
+      : searchResults
+  }, [searchResults, compat])
+
   console.log(searchResults, mostStarred)
 
   return (
     <main>
       <title>Home Page</title>
 
-      <input type="search" onChange={(event) => setQuery(event.target.value)} />
+      <input type="search" onChange={(e) => setQuery(e.target.value)} />
+
+      <div>
+        <label htmlFor="search-compat">Compatibility</label>
+        <select id="search-compat" onChange={(e) => setCompat(e.target.value)}>
+          <option value="">Any</option>
+          <option value="3">Phaser 3</option>
+          <option value="2">Phaser 2</option>
+        </select>
+      </div>
 
       <ul>
-        {(query ? searchResults : mostStarred)?.map((result, i) => (
+        {(query ? filteredResults : mostStarred)?.map((result, i) => (
           <li key={i}>{result.name}</li>
         ))}
       </ul>
