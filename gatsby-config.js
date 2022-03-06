@@ -123,17 +123,16 @@ module.exports = {
           'ownerLogin',
           'ownerUrl',
           'ownerAvatarUrl',
-          'compatibility',
           'url',
           'stars',
           'updatedAt',
+          'compatibility',
         ],
         normalizer: ({ data }) =>
-          console.log(data) ||
           Object.values(data.githubData.data).map((repo, index) => {
             const { id, name, owner, description, url, stargazers, updatedAt } =
               repo
-            // const compatibility = phaserPluginData[index].compatibility.join(' ');
+            const compatibility = phaserPluginData[index].compatibility
 
             return {
               id,
@@ -145,7 +144,7 @@ module.exports = {
               url,
               stars: stargazers.totalCount,
               updatedAt,
-              // compatibility,
+              compatibility,
             }
           }),
       },
