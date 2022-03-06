@@ -1,12 +1,20 @@
-import * as React from 'react';
+import { graphql } from 'gatsby'
 
-const IndexPage = (a) => {
-  console.log(a);
+export default function IndexPage(props) {
+  const { localSearchPlugins } = props
+
   return (
     <main>
       <title>Home Page</title>
     </main>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export const query = graphql`
+  query {
+    localSearchPlugins {
+      index
+      store
+    }
+  }
+`
