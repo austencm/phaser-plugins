@@ -1,6 +1,7 @@
 const dotenv = require('dotenv')
-const phaserPluginData = require('./lib/plugins')
 const _take = require('lodash/take')
+
+const phaserPluginData = require('./data/plugins.json')
 
 dotenv.config({ path: `.env` })
 
@@ -37,7 +38,6 @@ const reposQuery = `
       .join('')}
   }
 `
-console.log(reposQuery)
 
 module.exports = {
   siteMetadata: {
