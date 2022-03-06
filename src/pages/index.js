@@ -1,16 +1,24 @@
 import { graphql } from 'gatsby'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useLocalSearch } from '@/lib/use-local-search'
 
 export default function IndexPage(props) {
   console.log(props)
   const { localSearchPlugins } = props.data
   const [query, setQuery] = useState('')
+
+  const mostStarred = useMemo(
+    () =>
+      Object.values(localSearchPlugins.store).sort((a, b) => b.stars - a.stars),
+    [localSearchPlugins]
+  )
+
   const searchResults = useLocalSearch(
     localSearchPlugins.index,
     localSearchPlugins.store,
     query
   )
+  console.log(searchResults, mostStarred)
 
   return (
     <main>
@@ -19,7 +27,7 @@ export default function IndexPage(props) {
       <input type="search" onChange={(event) => setQuery(event.target.value)} />
 
       <ul>
-        {searchResults?.map((result, i) => (
+        {(query ? searchResults : mostStarred)?.map((result, i) => (
           <li key={i}>{result.name}</li>
         ))}
       </ul>

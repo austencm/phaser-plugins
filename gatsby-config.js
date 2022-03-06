@@ -104,14 +104,14 @@ module.exports = {
           {
             githubData {
               data {
-              ${_take(phaserPluginData, 3).map(
-                (plugin, index) => `
-                  repo${index} {
-                    ${repoFields}
-                  }
-                `
-              )}
-                }
+                ${_take(phaserPluginData, 3).map(
+                  (plugin, index) => `
+                    repo${index} {
+                      ${repoFields}
+                    }
+                  `
+                )}
+              }
             }
           }
         `,
