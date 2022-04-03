@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 
-const phaserPluginData = require('./data/repos.json')
+const allRepos = require('./data/repos.json')
 
 dotenv.config({ path: `.env` })
 
@@ -12,7 +12,6 @@ const repoFields = `
     login
     url
   }
-  description
   shortDescriptionHTML
   url
   updatedAt
@@ -25,7 +24,7 @@ const repoFields = `
 
 const reposQuery = `
   query repos {
-    ${phaserPluginData
+    ${allRepos
       .map(({ repo }, index) => {
         const [owner, name] = repo.split('/')
 
@@ -98,13 +97,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-local-search',
       options: {
-        name: 'plugins',
+        name: 'repos',
         engine: 'flexsearch',
         query: `
           {
             githubData {
               data {
-                ${phaserPluginData.map(
+                ${allRepos.map(
                   (plugin, index) => `
                     repo${index} {
                       ${repoFields}
@@ -142,7 +141,7 @@ module.exports = {
               forks,
               updatedAt,
             } = repo
-            const { compatibility } = phaserPluginData[index]
+            const { compatibility } = allRepos[index]
 
             return {
               id,
