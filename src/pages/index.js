@@ -5,7 +5,7 @@ import { useLocalSearch } from '@/lib/use-local-search'
 export default function IndexPage(props) {
   const { localSearchRepos } = props.data
   const [query, setQuery] = useState('')
-  const [compat, setCompat] = useState(null)
+  const [compat, setCompat] = useState('')
 
   const mostStarred = useMemo(
     () =>
@@ -20,9 +20,15 @@ export default function IndexPage(props) {
   )
 
   const filteredResults = useMemo(() => {
+    const baseResults = query ? searchResults : mostStarred
+
     return compat
-      ? searchResults.filter((result) => result.compatibility.includes(compat))
-      : searchResults
+      ? baseResults.filter((result) =>
+          compat === 'unknown'
+            ? result.compatibility.length === 0
+            : result.compatibility.includes(compat)
+        )
+      : baseResults
   }, [searchResults, compat])
 
   console.log(searchResults, mostStarred)
@@ -39,11 +45,12 @@ export default function IndexPage(props) {
           <option value="">Any</option>
           <option value="3">Phaser 3</option>
           <option value="2">Phaser 2</option>
+          <option value="unknown">Unknown</option>
         </select>
       </div>
 
       <ul>
-        {(query ? filteredResults : mostStarred)?.map((result, i) => (
+        {filteredResults?.map((result, i) => (
           <li key={i}>{result.name}</li>
         ))}
       </ul>
