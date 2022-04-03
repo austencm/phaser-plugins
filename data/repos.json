@@ -456,10 +456,6 @@
     "compatibility": ["2"]
   },
   {
-    "repo": "MatthijsMud/PhaserGamepad",
-    "compatibility": ["3"]
-  },
-  {
     "repo": "lfarroco/poser",
     "compatibility": ["3"]
   },
