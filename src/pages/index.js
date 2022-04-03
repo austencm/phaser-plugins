@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby'
 import { useMemo, useState } from 'react'
+
+import '@/css/main.css'
 import { useLocalSearch } from '@/lib/use-local-search'
 
 export default function IndexPage(props) {
@@ -29,7 +31,7 @@ export default function IndexPage(props) {
             : result.compatibility.includes(compat)
         )
       : baseResults
-  }, [searchResults, compat])
+  }, [query, searchResults, mostStarred, compat])
 
   console.log(searchResults, mostStarred)
 
@@ -49,11 +51,11 @@ export default function IndexPage(props) {
         </select>
       </div>
 
-      <ul>
+      <ol>
         {filteredResults?.map((result, i) => (
-          <li key={i}>{result.name}</li>
+          <li key={result.id}>{result.name}</li>
         ))}
-      </ul>
+      </ol>
     </main>
   )
 }

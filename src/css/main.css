@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply focus-visible:outline-black;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
