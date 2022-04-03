@@ -81,8 +81,8 @@ module.exports = {
         fonts: {
           google2: [
             {
-              family: 'Exo 2',
-              axes: 'wght@300..900',
+              family: 'Inter',
+              axes: 'wght@100..900',
             },
           ],
         },
