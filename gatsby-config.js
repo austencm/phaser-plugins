@@ -1,7 +1,6 @@
 const dotenv = require('dotenv')
-const _take = require('lodash/take')
 
-const phaserPluginData = require('./data/plugins.json')
+const phaserPluginData = require('./data/repos.json')
 
 dotenv.config({ path: `.env` })
 
@@ -11,21 +10,22 @@ const repoFields = `
   owner {
     id
     login
-    avatarUrl
     url
   }
-  nameWithOwner
   description
+  shortDescriptionHTML
   url
-  stargazers {
+  updatedAt
+  openGraphImageUrl
+  stargazerCount
+  forks {
     totalCount
   }
-  updatedAt
 `
 
 const reposQuery = `
   query repos {
-    ${_take(phaserPluginData, 3)
+    ${phaserPluginData
       .map(({ repo }, index) => {
         const [owner, name] = repo.split('/')
 
@@ -104,7 +104,7 @@ module.exports = {
           {
             githubData {
               data {
-                ${_take(phaserPluginData, 3).map(
+                ${phaserPluginData.map(
                   (plugin, index) => `
                     repo${index} {
                       ${repoFields}
@@ -122,27 +122,38 @@ module.exports = {
           'description',
           'ownerLogin',
           'ownerUrl',
-          'ownerAvatarUrl',
           'url',
+          'imageUrl',
           'stars',
+          'forks',
           'updatedAt',
           'compatibility',
         ],
         normalizer: ({ data }) =>
           Object.values(data.githubData.data).map((repo, index) => {
-            const { id, name, owner, description, url, stargazers, updatedAt } =
-              repo
-            const compatibility = phaserPluginData[index].compatibility
+            const {
+              id,
+              name,
+              owner,
+              shortDescriptionHTML,
+              url,
+              openGraphImageUrl,
+              stargazerCount,
+              forks,
+              updatedAt,
+            } = repo
+            const { compatibility } = phaserPluginData[index]
 
             return {
               id,
               name,
+              description: shortDescriptionHTML,
               ownerLogin: owner.login,
               ownerUrl: owner.url,
-              ownerAvatarUrl: owner.avatarUrl,
-              description,
               url,
-              stars: stargazers.totalCount,
+              imageUrl: openGraphImageUrl,
+              stars: stargazerCount,
+              forks: forks.totalCount,
               updatedAt,
               compatibility,
             }
