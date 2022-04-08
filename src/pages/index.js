@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react'
 
 import '@/css/main.css'
 import { useLocalSearch } from '@/lib/use-local-search'
+import RepoCard from '@/components/repo-card'
 
 export default function IndexPage(props) {
   const { localSearchRepos } = props.data
@@ -36,27 +37,34 @@ export default function IndexPage(props) {
   console.log(searchResults, mostStarred)
 
   return (
-    <main>
+    <div>
       <title>Home Page</title>
 
-      <input type="search" onChange={(e) => setQuery(e.target.value)} />
+      <main>
+        <input type="search" onChange={(e) => setQuery(e.target.value)} />
 
-      <div>
-        <label htmlFor="search-compat">Compatibility</label>
-        <select id="search-compat" onChange={(e) => setCompat(e.target.value)}>
-          <option value="">Any</option>
-          <option value="3">Phaser 3</option>
-          <option value="2">Phaser 2</option>
-          <option value="unknown">Unknown</option>
-        </select>
-      </div>
+        <div>
+          <label htmlFor="search-compat">Compatibility</label>
+          <select
+            id="search-compat"
+            onChange={(e) => setCompat(e.target.value)}
+          >
+            <option value="">Any</option>
+            <option value="3">Phaser 3</option>
+            <option value="2">Phaser 2</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
 
-      <ol>
-        {filteredResults?.map((result, i) => (
-          <li key={result.id}>{result.name}</li>
-        ))}
-      </ol>
-    </main>
+        <ol className="grid grid-cols-3">
+          {filteredResults?.map((result) => (
+            <li key={result.id} className="p-10 border border-t-0 border-l-0">
+              <RepoCard data={result} />
+            </li>
+          ))}
+        </ol>
+      </main>
+    </div>
   )
 }
 
