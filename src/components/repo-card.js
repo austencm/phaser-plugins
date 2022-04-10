@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import starIcon from '@/images/star-outline.svg'
 import forkIcon from '@/images/source-fork.svg'
 import compatIcon from '@/images/set-none.svg'
+import githubIcon from '@/images/github.svg'
 
 const numberFormat = Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
@@ -87,7 +88,7 @@ export default function RepoCard(props) {
         </a>
       </div>
 
-      <dl className="flex space-x-7 mt-auto pt-6">
+      <dl className="flex items-center space-x-7 mt-auto pt-6">
         <Stat
           value={numberFormat.format(data.stars)}
           label="Stars"
@@ -103,6 +104,14 @@ export default function RepoCard(props) {
           label="Compat."
           icon={compatIcon}
         />
+        <a
+          href={data.url}
+          target="_blank"
+          rel="noreferrer"
+          className="!ml-auto opacity-50 hover:opacity-100"
+        >
+          <img src={githubIcon} width={36} height={36} alt="Github" />
+        </a>
       </dl>
     </article>
   )
