@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import '@/css/main.css'
 import { useLocalSearch } from '@/lib/use-local-search'
 import RepoCard from '@/components/repo-card'
+import SearchFields from '@/components/search-fields'
 
 export default function IndexPage(props) {
   const { localSearchRepos } = props.data
@@ -34,27 +35,17 @@ export default function IndexPage(props) {
       : baseResults
   }, [query, searchResults, mostStarred, compat])
 
-  console.log(searchResults, mostStarred)
+  const onChangeSearch = ({ query, compat }) => {
+    if (typeof query !== 'undefined') setQuery(query)
+    if (typeof compat !== 'undefined') setCompat(compat)
+  }
 
   return (
     <div>
       <title>Home Page</title>
 
       <main>
-        <input type="search" onChange={(e) => setQuery(e.target.value)} />
-
-        <div>
-          <label htmlFor="search-compat">Compatibility</label>
-          <select
-            id="search-compat"
-            onChange={(e) => setCompat(e.target.value)}
-          >
-            <option value="">Any</option>
-            <option value="3">Phaser 3</option>
-            <option value="2">Phaser 2</option>
-            <option value="unknown">Unknown</option>
-          </select>
-        </div>
+        <SearchFields onChange={onChangeSearch} />
 
         <ol className="grid grid-cols-3">
           {filteredResults?.map((result) => (
