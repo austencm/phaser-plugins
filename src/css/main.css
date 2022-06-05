@@ -16,4 +16,7 @@
 }
 
 @layer utilities {
+  .grid-stack > * {
+    @apply row-span-full col-span-full;
+  }
 }

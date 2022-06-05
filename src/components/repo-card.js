@@ -108,7 +108,7 @@ export default function RepoCard(props) {
           href={data.url}
           target="_blank"
           rel="noreferrer"
-          className="!ml-auto opacity-50 hover:opacity-100"
+          className="shrink-0 !ml-auto pl-7 opacity-50 hover:opacity-100"
         >
           <img src={githubIcon} width={36} height={36} alt="Github" />
         </a>
