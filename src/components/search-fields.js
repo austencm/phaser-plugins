@@ -11,10 +11,10 @@ export default function SearchFields(props) {
           Search {totalItems} repos
         </label>
         <div className="h-full grid grid-stack items-center">
-          <img 
-            src={searchIcon} 
+          <img
+            src={searchIcon}
             width="26"
-            aria-hidden="true" 
+            aria-hidden="true"
             className="ml-3 pointer-events-none z-10 opacity-50 group-focus-within:opacity-100"
           />
           <input
@@ -31,14 +31,14 @@ export default function SearchFields(props) {
         <label htmlFor="search-compat" className="sr-only">
           Compatibility
         </label>
-        <img 
-          src={compatIcon} 
+        <img
+          src={compatIcon}
           width="26"
-          aria-hidden="true" 
+          aria-hidden="true"
           className="ml-3 pointer-events-none z-10 opacity-50 group-focus-within:opacity-100"
         />
         <select
-          className='h-full pl-11 pr-3 mr-3 bg-transparent focus-visible:outline-none'
+          className="h-full pl-11 pr-3 mr-3 bg-transparent focus-visible:outline-none"
           id="search-compat"
           onChange={(e) => onChange({ compat: e.target.value })}
         >
