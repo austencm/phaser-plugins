@@ -1,5 +1,10 @@
+import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+
 import phaserLogo from '@/images/phaser-logo.png'
 import rocket from '@/images/rocket-launch-outline.svg'
+
+dayjs.extend(localizedFormat)
 
 const links = [
   {
@@ -35,12 +40,11 @@ export default function Sidebar() {
           >
             Phaser framework
           </a>
-          .
         </p>
         <p className="mt-3">
           <a
             href="https://github.com/austencm/phaser-plugins"
-            className="text-black hover:underline"
+            className="inline-flex mt-1 py-1.5 px-3 text-xs text-white bg-black rounded-md hover:bg-black/80"
           >
             Contribute on GitHub
           </a>
@@ -48,8 +52,8 @@ export default function Sidebar() {
         </p>
       </div>
 
-      <div className="pt-6 border-t">
-        <h2 className="mb-3 font-bold text-base">Links</h2>
+      <div className="hidden lg:block pt-6 border-t">
+        <h2 className="mb-3 font-bold">Links</h2>
         <ul className="flex flex-col space-y-1">
           {links.map((link) => (
             <li key={link.label}>
@@ -64,13 +68,14 @@ export default function Sidebar() {
         </ul>
       </div>
 
-      <div className="group inline-flex !mt-auto opacity-20 hover:opacity-100">
+      <div className="group !mt-auto opacity-20 hover:opacity-100 hidden lg:inline-flex items-center text-xs">
         <img
           src={rocket}
           width="24"
           alt="Phaser"
-          className="group-hover:transition group-hover:duration-1000 group-hover:ease-in group-hover:translate-x-80 group-hover:-translate-y-36 group-hover:rotate-[35deg]"
+          className="mr-4 group-hover:transition group-hover:duration-1000 group-hover:ease-in group-hover:translate-x-80 group-hover:-translate-y-36 group-hover:rotate-[25deg]"
         />
+        Last data update: {dayjs().format('ll')}
       </div>
     </div>
   )

@@ -145,7 +145,7 @@ module.exports = {
 
             return {
               id,
-              name,
+              name: name.replaceAll('_', '_<wbr>'),
               description: shortDescriptionHTML,
               ownerLogin: owner.login,
               ownerUrl: owner.url,

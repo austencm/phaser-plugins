@@ -1,9 +1,12 @@
 import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
 
 import starIcon from '@/images/star-outline.svg'
 import forkIcon from '@/images/source-fork.svg'
 import compatIcon from '@/images/set-none.svg'
 import githubIcon from '@/images/github.svg'
+
+dayjs.extend(localizedFormat)
 
 const numberFormat = Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
@@ -23,10 +26,11 @@ function Stat(props) {
         src={icon}
         width={20}
         height={20}
-        className="min-w-[20px] mr-0.5 row-span-2 opacity-50"
+        className="min-w-[20px] mt-1 mr-0.5 row-span-2 opacity-50"
+        loading="lazy"
         aria-hidden="true"
       />
-      <dd className="mb-0.5 text-lg leading-tight">{value}</dd>
+      <dd className="mb-0.5 sm:text-lg leading-tight">{value}</dd>
       <dt className="text-neutral-500 text-sm">{label}</dt>
     </div>
   )
@@ -37,7 +41,7 @@ export default function RepoCard(props) {
   const date = dayjs(data.updatedAt)
 
   return (
-    <article className="flex flex-col h-full">
+    <article className="flex flex-col h-full overflow-hidden">
       <div className="flex justify-between items-start space-x-6">
         <div>
           <address className="text-neutral-400 leading-tight after:content-['/']">
@@ -50,15 +54,14 @@ export default function RepoCard(props) {
               {data.ownerLogin}
             </a>
           </address>
-          <h2 className="text-2xl mb-3 font-bold leading-tight">
+          <h2 className="text-xl sm:text-2xl mb-3 font-bold leading-tight">
             <a
               href={data.url}
               target="_blank"
               rel="noreferrer"
               className="hover:underline"
-            >
-              {data.name}
-            </a>
+              dangerouslySetInnerHTML={{ __html: data.name }}
+            />
           </h2>
           <p
             className="text-sm text-neutral-700"
@@ -68,7 +71,7 @@ export default function RepoCard(props) {
             datetime={date.format()}
             className="block mt-4 text-xs text-neutral-800 font-medium"
           >
-            Updated {date.format('MMM D[,] YYYY')}
+            Updated {date.format('ll')}
           </time>
         </div>
 
@@ -83,7 +86,8 @@ export default function RepoCard(props) {
             width={50}
             height={50}
             alt={data.ownerLogin}
-            className="h-[50px] object-cover rounded-full"
+            loading="lazy"
+            className="h-[50px] object-cover rounded-full border"
           />
         </a>
       </div>
@@ -104,14 +108,6 @@ export default function RepoCard(props) {
           label="Compat."
           icon={compatIcon}
         />
-        <a
-          href={data.url}
-          target="_blank"
-          rel="noreferrer"
-          className="shrink-0 !ml-auto pl-7 opacity-50 hover:opacity-100"
-        >
-          <img src={githubIcon} width={36} height={36} alt="Github" />
-        </a>
       </dl>
     </article>
   )

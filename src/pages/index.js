@@ -43,29 +43,42 @@ export default function IndexPage(props) {
   }
 
   return (
-    <main className="h-screen grid grid-cols-[280px_auto]">
+    <main className="lg:h-screen lg:grid lg:grid-cols-[280px_auto]">
       <Helmet>
         <title>Phaser Plugins</title>
       </Helmet>
 
-      <header className="row-span-2 border-r">
+      <header className="row-span-2 pb-8 sm:pb-0 border-r border-b lg:border-b-0">
         <Sidebar />
       </header>
 
-      <div className="border-b">
-        <SearchFields
-          totalItems={mostStarred.length}
-          onChange={onChangeSearch}
-        />
-      </div>
+      <div className="lg:h-screen lg:flex lg:flex-col">
+        <div className="sticky top-0 z-10 lg:static h-min border-b lg:border-t-0 bg-white">
+          <SearchFields
+            totalItems={mostStarred.length}
+            onChange={onChangeSearch}
+          />
+        </div>
 
-      <ol className="grid grid-cols-3 overflow-auto">
-        {filteredResults?.map((result) => (
-          <li key={result.id} className="p-10 border border-t-0 border-l-0">
-            <RepoCard data={result} />
-          </li>
-        ))}
-      </ol>
+        {filteredResults.length !== 0 ? (
+          <ol className="grid md:grid-cols-2 xl:grid-cols-3 overflow-auto">
+            {filteredResults?.map((result) => (
+              <li
+                key={result.id}
+                className="p-6 lg:p-10 border border-t-0 border-l-0"
+              >
+                <RepoCard data={result} />
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <div className="max-w-sm mt-10 mx-auto">
+            <div className="mx-6 px-16 py-4 border text-center text-sm">
+              No results :(
+            </div>
+          </div>
+        )}
+      </div>
     </main>
   )
 }
