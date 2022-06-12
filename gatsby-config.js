@@ -46,6 +46,12 @@ module.exports = {
   jsxRuntime: 'automatic',
   plugins: [
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/rocket-launch-outline.svg',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [require('postcss-preset-env')({ stage: 1 })],
@@ -157,6 +163,13 @@ module.exports = {
               compatibility,
             }
           }),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [process.env.GA4_ID],
+        pluginConfig: { head: true },
       },
     },
   ],

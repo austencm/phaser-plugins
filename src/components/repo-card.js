@@ -4,7 +4,6 @@ import localizedFormat from 'dayjs/plugin/localizedFormat'
 import starIcon from '@/images/star-outline.svg'
 import forkIcon from '@/images/source-fork.svg'
 import compatIcon from '@/images/set-none.svg'
-import githubIcon from '@/images/github.svg'
 
 dayjs.extend(localizedFormat)
 
@@ -28,6 +27,7 @@ function Stat(props) {
         height={20}
         className="min-w-[20px] mt-1 mr-0.5 row-span-2 opacity-50"
         loading="lazy"
+        alt=""
         aria-hidden="true"
       />
       <dd className="mb-0.5 sm:text-lg leading-tight">{value}</dd>

@@ -14,6 +14,7 @@ export default function SearchFields(props) {
           <img
             src={searchIcon}
             width="26"
+            alt=""
             aria-hidden="true"
             className="ml-3 pointer-events-none z-10 opacity-50 group-focus-within:opacity-100"
           />
@@ -34,6 +35,7 @@ export default function SearchFields(props) {
         <img
           src={compatIcon}
           width="26"
+          alt=""
           aria-hidden="true"
           className="ml-3 pointer-events-none z-10 opacity-50 group-focus-within:opacity-100"
         />

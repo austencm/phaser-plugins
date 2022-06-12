@@ -1,12 +1,12 @@
 import { graphql } from 'gatsby'
 import { useMemo, useState } from 'react'
-import { Helmet } from 'react-helmet'
 
 import '@/css/main.css'
 import { useLocalSearch } from '@/lib/use-local-search'
 import RepoCard from '@/components/repo-card'
 import SearchFields from '@/components/search-fields'
 import Sidebar from '@/components/sidebar'
+import Head from '@/components/head'
 
 export default function IndexPage(props) {
   const { localSearchRepos } = props.data
@@ -44,9 +44,7 @@ export default function IndexPage(props) {
 
   return (
     <main className="lg:h-screen lg:grid lg:grid-cols-[280px_auto]">
-      <Helmet>
-        <title>Phaser Plugins</title>
-      </Helmet>
+      <Head />
 
       <header className="row-span-2 pb-8 sm:pb-0 border-r border-b lg:border-b-0">
         <Sidebar />
