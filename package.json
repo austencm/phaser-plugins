@@ -17,6 +17,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "autoprefixer": "^10.4.4",
     "dayjs": "^1.11.3",
     "flexsearch": "^0.6.32",
