@@ -46,7 +46,7 @@ export default function SearchFields(props) {
         >
           <option value="">Any Version</option>
           <option value="3">Phaser 3</option>
-          <option value="2">Phaser 2</option>
+          <option value="2">Phaser 2/CE</option>
           <option value="unknown">Unknown</option>
         </select>
       </div>

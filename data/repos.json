@@ -1,482 +1,592 @@
 [
   {
     "repo": "photonstorm/phaser3-plugin-template",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "sebashwa/phaser3-plugin-isometric",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "lewster32/phaser-plugin-isometric",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "jdnichollsc/Phaser-Kinetic-Scrolling-Plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "dmaslov/phaser-screen-shake",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "Flaxis/slick-ui",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "appsbu-de/phaser_plugin_pathfinding",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "Gamegur-us/phaser-touch-control-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-spine",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-nineslice",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-ads",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-i18next",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-input",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-super-storage",
-    "compatibility": []
+    "compatibility": ["2", "3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-cachebuster",
-    "compatibility": []
+    "compatibility": ["2", "3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-amazon-cognito",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-crisp-text",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-advanced-debug",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "azerion/phaser-web-workers",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "cristianbote/phaser-state-transition",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "ShawnHymel/phaser-plugin-virtual-gamepad",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netcell/phaser-inspector",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "nkholski/phaser-grid-physics",
-    "compatibility": ["2", "~3"]
+    "compatibility": ["2", "3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "mikewesthad/navmesh",
-    "compatibility": ["2", "3"]
+    "compatibility": ["2", "3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "beeglebug/phaser-pixel-scaler",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "angelozerr/tern-phaser",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "StudioKrok/PhaserSpine",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "jdotrjs/phaser3-nineslice",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samid737/phaser3-plugin-pathbuilder",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "luckylooke/phaser-islandjs-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "hexus/phaser-arcade-slopes",
-    "compatibility": ["2", "3"]
+    "compatibility": ["2", "3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "raksa/phaser-dragonbones",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
-    "repo": "lewispollard/phaser-pnc",
-    "compatibility": []
+    "repo": "lewiji/phaser-pnc",
+    "compatibility": ["2"],
+    "tags": ["plugin", "example"]
   },
   {
     "repo": "InformalPenguins/phaser-vjoy-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "koreezgames/phaser3-particle-editor",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "koreezgames/phaser-particle-editor-plugin",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "koreezgames/phaser3-i18n-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "koreezgames/phaser3-ninepatch-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "16patsle/phaser3-weapon-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "englercj/phaser-debug",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/Phasetips",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
+  },
+  {
+    "repo": "netgfx/Phaser-tooltip",
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/Phaser-FloatingText",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
+  },
+  {
+    "repo": "netgfx/Phaser-FloatingNumbersPlugin",
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/PhaseSlider",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/phaser_modals",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/Phaser-typewriter",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/Phaser-FXQ",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "netgfx/Phaser-SoundManager",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "luizbills/phaser-behavior-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-scene-graph",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-advanced-timing",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-debug-body-colors",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-debug-draw",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-update",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-scene-watcher",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-follow",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-parcel",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-game-scale",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-component-health",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-debug-arcade-physics",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-track",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-game-gui",
-    "compatibility": ["2"]
-  },
-  {
-    "repo": "samme/phaser3-examples-assets",
-    "compatibility": ["3"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-debug-tween",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-debug-object",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-sprite-gui",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-view-cache",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-plugin-step",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-teletype",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-debug-emitter",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-ondamaged-signal",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-camera-offset",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-group-signals",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samme/phaser-batch-emitter",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "mikewesthad/phaser-matter-collision-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "hexus/phaser-slopes",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "CyberCactus/phaser-sound-analyser",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "anthony-mills/procedural_dungeon",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "ada-lovecraft/phaser-juicy",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "nkholski/phaser-animated-tiles",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "woutercommandeur/phaser-ecs",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "jorbascrumps/phaser-plugin-list-view",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "damienleroux/phaser-move-and-stop-plugin",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "noffle/phaser-capture",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "ad4game/phaser-a4g",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "michaeljcalkins/arcade-polygons-plugin",
-    "compatibility": []
+    "compatibility": [],
+    "tags": ["plugin"]
   },
   {
     "repo": "aphorism44/phaser-barchart",
-    "compatibility": []
+    "compatibility": [],
+    "tags": ["plugin"]
   },
   {
     "repo": "nkholski/phaser-plugin-starter",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "satanas/phaser-fade-plugin",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "xaviserrag/phaserjs-dialogs-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "matthiaswh/phaser-health-meter",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "jefree/sprite-bones",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "dibu28/SimpleTouchControl",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "chewax/Phaser-Typescript-Joypad",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "aerze/Textbox-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "VitaZheltyakov/phaser-nine-patch-plugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "samid737/phaser-plugin-pocketdebug",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "gammafp/phaser3-swipe",
-    "compatibility": ["3"]
-  },
-  {
-    "repo": "Pietrum/phaser-plugin-hexagonal",
-    "compatibility": []
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "iliyaZelenko/phaser3-swipe-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "andreasp1994/PhaserHealthBarPlugin",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "florianvazelle/phaser3-vjoy-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "16patsle/phaser3-lightning-plugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "otorexia/phaser3-ui",
-    "compatibility": []
-  },
-  {
-    "repo": "philippecapouillez/phaser-VirtualTimer",
-    "compatibility": []
+    "compatibility": ["3"],
+    "tags": ["starter"]
   },
   {
     "repo": "tonetheman/phaser3_webfontloaderplugin",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "Cudabear/PhaserPlaybook",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "jorbascrumps/phaser-plugin-water-body",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "timothyleerussell/phaser-plugin-dvr",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "JHAvrick/phaser3-transitions",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "JHAvrick/phaser3-phorge",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "sporadic-labs/phaser-lifecycle-plugin",
-    "compatibility": ["3"]
-  },
-  {
-    "repo": "flyover/spine-phaser-plugin",
-    "compatibility": []
-  },
-  {
-    "repo": "flyover/spriter-phaser-plugin",
-    "compatibility": []
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "nexiuhm/Phaser.Container",
-    "compatibility": ["2"]
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "lfarroco/poser",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "nsbawden/TouchCursor",
-    "compatibility": []
+    "compatibility": ["2"],
+    "tags": ["plugin"]
   },
   {
     "repo": "rroylance/phaser-ce-npm-webpack-typescript-starter-project",
-    "compatibility": ["2", "ce"]
+    "compatibility": ["2"],
+    "tags": ["starter"]
   },
   {
     "repo": "GaryStanton/phaser3-merged-input",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "ivopc/phaser3-illuminated",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
   },
   {
     "repo": "browndragon/phaser3-autotile",
-    "compatibility": ["3"]
+    "compatibility": ["3"],
+    "tags": ["plugin"]
+  },
+  {
+    "repo": "photonstorm/phaser3-examples",
+    "compatibility": ["3"],
+    "tags": ["example"]
   }
 ]
