@@ -426,18 +426,18 @@
   },
   {
     "repo": "michaeljcalkins/arcade-polygons-plugin",
-    "compatibility": [],
+    "compatibility": ["2"],
     "tags": ["plugin"]
   },
   {
     "repo": "aphorism44/phaser-barchart",
-    "compatibility": [],
+    "compatibility": ["2"],
     "tags": ["plugin"]
   },
   {
     "repo": "nkholski/phaser-plugin-starter",
     "compatibility": ["3"],
-    "tags": ["plugin"]
+    "tags": ["plugin", "starter"]
   },
   {
     "repo": "satanas/phaser-fade-plugin",
