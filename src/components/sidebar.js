@@ -48,7 +48,6 @@ export default function Sidebar() {
           >
             Contribute on GitHub
           </a>
-          .
         </p>
       </div>
 
