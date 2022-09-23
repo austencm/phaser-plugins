@@ -1,8 +1,14 @@
 const dotenv = require('dotenv')
+const camelCase = require('lodash/camelCase')
+const fs = require('fs')
 
 const allRepos = require('./data/repos.json')
 
 dotenv.config({ path: `.env` })
+
+function getRepoAlias(repoOwnerName, index) {
+  return `repo${index}${camelCase(repoOwnerName)}`
+}
 
 const repoFields = `
   id
@@ -24,19 +30,44 @@ const repoFields = `
 
 const reposQuery = `
   query repos {
-    ${allRepos
-      .map(({ repo }, index) => {
-        const [owner, name] = repo.split('/')
+    ${allRepos.map(({ repo }, i) => {
+      const [owner, name] = repo.split('/')
+      const alias = getRepoAlias(repo, i)
 
-        return `
-          repo${index}: repository(owner: "${owner}", name: "${name}") {
+      // TODO: could reduce maintenance when repos move by querying by id
+      // https://github.com/orgs/community/discussions/22184#discussioncomment-3235793
+      return `
+          ${alias}: repository(owner: "${owner}", name: "${name}") {
             ${repoFields}
           }
         `
-      })
-      .join('')}
+    })}
   }
 `
+
+const localSearchQuery = `
+  {
+    githubData {
+      data {
+        ${allRepos.map(
+          ({ repo }, i) => `
+            ${getRepoAlias(repo, i)} {
+              ${repoFields}
+            }
+          `
+        )}
+      }
+    }
+  }
+`
+
+if (process.env.NODE_ENV === 'development') {
+  fs.writeFile('./repos-query.txt', reposQuery, (err) => {
+    if (err) {
+      console.log(err)
+    }
+  })
+}
 
 module.exports = {
   siteMetadata: {
@@ -105,21 +136,7 @@ module.exports = {
       options: {
         name: 'repos',
         engine: 'flexsearch',
-        query: `
-          {
-            githubData {
-              data {
-                ${allRepos.map(
-                  (plugin, index) => `
-                    repo${index} {
-                      ${repoFields}
-                    }
-                  `
-                )}
-              }
-            }
-          }
-        `,
+        query: localSearchQuery,
         index: ['ownerLogin', 'name', 'description'],
         store: [
           'id',

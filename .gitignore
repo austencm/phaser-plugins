@@ -5,3 +5,4 @@ public
 .DS_Store
 # Local Netlify folder
 .netlify
+repos-query.txt
