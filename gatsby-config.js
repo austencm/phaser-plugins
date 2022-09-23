@@ -17,11 +17,11 @@ const repoFields = `
     id
     login
     url
+    avatarUrl
   }
   shortDescriptionHTML
   url
   updatedAt
-  openGraphImageUrl
   stargazerCount
   forks {
     totalCount
@@ -159,7 +159,6 @@ module.exports = {
               owner,
               shortDescriptionHTML,
               url,
-              openGraphImageUrl,
               stargazerCount,
               forks,
               updatedAt,
@@ -173,7 +172,7 @@ module.exports = {
               ownerLogin: owner.login,
               ownerUrl: owner.url,
               url,
-              imageUrl: openGraphImageUrl,
+              imageUrl: owner.avatarUrl,
               stars: stargazerCount,
               forks: forks.totalCount,
               updatedAt,
