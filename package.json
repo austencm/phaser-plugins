@@ -21,7 +21,7 @@
     "autoprefixer": "^10.4.4",
     "dayjs": "^1.11.3",
     "flexsearch": "^0.6.32",
-    "gatsby": "^4.5.2",
+    "gatsby": "^4.23.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-analytics": "^4.5.0",
     "gatsby-plugin-google-gtag": "^4.16.0",
