@@ -68,7 +68,7 @@ export default function RepoCard(props) {
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
           <time
-            datetime={date.format()}
+            dateTime={date.format()}
             className="block mt-4 text-xs text-neutral-800 font-medium"
           >
             Updated {date.format('ll')}

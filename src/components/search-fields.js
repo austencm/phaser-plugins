@@ -7,7 +7,7 @@ export default function SearchFields(props) {
   return (
     <div className="flex relative">
       <div className="group h-[46px] sm:h-[56px] flex flex-col grow border-l-4 border-black focus-within:bg-black/5">
-        <label htmlFor="search-query" class="sr-only">
+        <label htmlFor="search-query" className="sr-only">
           Search {totalItems} repos
         </label>
         <div className="h-full grid grid-stack items-center">
@@ -20,7 +20,7 @@ export default function SearchFields(props) {
           />
           <input
             id="search-query"
-            class="h-full pl-11 pr-3 text-base lg:text-lg bg-transparent focus-visible:outline-none"
+            className="h-full pl-11 pr-3 text-base lg:text-lg bg-transparent focus-visible:outline-none"
             type="search"
             placeholder={`Search ${totalItems} repos`}
             onChange={(e) => onChange({ query: e.target.value })}
