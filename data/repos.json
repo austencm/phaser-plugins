@@ -80,11 +80,6 @@
     "tags": ["plugin"]
   },
   {
-    "repo": "azerion/phaser-crisp-text",
-    "compatibility": ["2"],
-    "tags": ["plugin"]
-  },
-  {
     "repo": "azerion/phaser-advanced-debug",
     "compatibility": ["2"],
     "tags": ["plugin"]
