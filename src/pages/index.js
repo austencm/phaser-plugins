@@ -12,6 +12,7 @@ export default function IndexPage(props) {
   const { localSearchRepos } = props.data
   const [query, setQuery] = useState('')
   const [compat, setCompat] = useState('')
+  const [tags, setTags] = useState('')
 
   const mostStarred = useMemo(
     () =>
@@ -28,18 +29,25 @@ export default function IndexPage(props) {
   const filteredResults = useMemo(() => {
     const baseResults = query ? searchResults : mostStarred
 
-    return compat
-      ? baseResults.filter((result) =>
-          compat === 'unknown'
-            ? result.compatibility.length === 0
-            : result.compatibility.includes(compat)
-        )
-      : baseResults
-  }, [query, searchResults, mostStarred, compat])
+    return compat || tags
+      ? baseResults.filter((result) => {
+          console.log(tags, result.tags)
+          const matchesCompat = compat
+            ? compat === 'unknown'
+              ? result.compatibility.length === 0
+              : result.compatibility.includes(compat)
+            : true
+          const matchesTags = tags ? result.tags.includes(tags) : true
 
-  const onChangeSearch = ({ query, compat }) => {
+          return matchesCompat && matchesTags
+        })
+      : baseResults
+  }, [query, searchResults, mostStarred, compat, tags])
+
+  const onChangeSearch = ({ query, compat, tags }) => {
     if (typeof query !== 'undefined') setQuery(query)
     if (typeof compat !== 'undefined') setCompat(compat)
+    if (typeof tags !== 'undefined') setTags(tags)
   }
 
   return (

@@ -150,6 +150,7 @@ module.exports = {
           'forks',
           'updatedAt',
           'compatibility',
+          'tags',
         ],
         normalizer: ({ data }) =>
           Object.values(data.githubData.data).map((repo, index) => {
@@ -163,7 +164,7 @@ module.exports = {
               forks,
               updatedAt,
             } = repo
-            const { compatibility } = allRepos[index]
+            const { compatibility, tags } = allRepos[index]
 
             return {
               id,
@@ -177,6 +178,7 @@ module.exports = {
               forks: forks.totalCount,
               updatedAt,
               compatibility,
+              tags,
             }
           }),
       },
