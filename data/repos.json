@@ -5,6 +5,11 @@
     "tags": ["plugin"]
   },
   {
+    "repo": "spikything/phaser-plugin-crt",
+    "compatibility": ["3"],
+    "tags": ["plugin"]
+  },
+  {
     "repo": "sebashwa/phaser3-plugin-isometric",
     "compatibility": ["3"],
     "tags": ["plugin"]
